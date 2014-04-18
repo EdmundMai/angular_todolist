@@ -3,6 +3,6 @@
 	<input type="submit" id="submit" value="Submit" />
 </form>
 
-<div ng-repeat="chore in chores | filter:chore.name" ng-controller="ChoresController">
+<div ng-repeat="chore in chores | filter:chore.name">
 	{{ chore.name }} - {{ chore.hours }} <a href="#blah" ng-click="removeChore(chore)">X</a>
 </div>
