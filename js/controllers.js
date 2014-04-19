@@ -19,10 +19,9 @@ toDoListApp.controller("ChoresController", function($scope) {
 	$scope.removeChore = function(unwanted_chore) {
 		var index = $scope.chores.indexOf(unwanted_chore);
 		console.log($scope.chores.length);
-		alert($scope.chores.length);
 		$scope.chores.splice(index, 1);
 		console.log($scope.chores.length);
 		console.log($scope.chores);
-		// $scope.$apply();
+		$scope.chores;
 	};
 });

@@ -1,8 +1,10 @@
 <form ng-submit="submit()">
-	<input type="text" name="chore_name" ng-model="chore.name">
+	
 	<input type="submit" id="submit" value="Submit" />
 </form>
 
+Search: <input type="text" ng-model="chore.name">
+
 <div ng-repeat="chore in chores | filter:chore.name">
-	{{ chore.name }} - {{ chore.hours }} <a href="#blah" ng-click="removeChore(chore)">X</a>
+	{{ chore.name }} - {{ chore.hours }} <a href="" ng-click="removeChore(chore)">X</a>
 </div>
