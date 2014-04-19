@@ -9,19 +9,14 @@ toDoListApp.controller("ChoresController", function($scope) {
 	}
 	];
 	$scope.submit = function() {
-		if ($scope.chore.name) {
-			$scope.chores.push({name: $scope.chore.name, hours: 2});
-			$scope.chore.name = '';
-		} else {
-			alert("none");
+		if ($scope.name && $scope.hours) {
+			$scope.chores.push({name: $scope.name, hours: $scope.hours});
+			$scope.name = '';
 		}
 	};
 	$scope.removeChore = function(unwanted_chore) {
 		var index = $scope.chores.indexOf(unwanted_chore);
-		console.log($scope.chores.length);
 		$scope.chores.splice(index, 1);
-		console.log($scope.chores.length);
-		console.log($scope.chores);
 		$scope.chores;
 	};
 });

@@ -1,7 +1,9 @@
-<form ng-submit="submit()">
-	
-	<input type="submit" id="submit" value="Submit" />
-</form>
+	<form ng-submit="submit()">
+		New Chore: <br>
+		Name: <input type="text" name="name" ng-model="name"><br>
+		Hours: <input type="text" name="hours" ng-model="hours"><br>
+		<input type="submit" id="submit" value="Submit" />
+	</form>
 
 Search: <input type="text" ng-model="chore.name">
 
