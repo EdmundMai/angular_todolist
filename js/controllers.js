@@ -1,13 +1,13 @@
-toDoListApp.controller("ChoresController", function($scope) {
-	$scope.chores = [{
-		name: "laundry",
-		hours: 3
-	},
-	{
-		name: "dishes",
-		hours: 0.5
+toDoListApp.controller("ChoresController", function($scope, choresFactory) {
+	function init() {
+		choresFactory.getChores().success(function(data) {
+			$scope.chores = data;
+			console.log(data);
+		});
 	}
-	];
+	
+	init();
+
 	$scope.submit = function() {
 		if ($scope.name && $scope.hours) {
 			$scope.chores.push({name: $scope.name, hours: $scope.hours});
